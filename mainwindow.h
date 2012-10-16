@@ -14,7 +14,13 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    
+
+private:
+    void setupActions();
+
+private slots:
+    void onFileOpen();
+
 private:
     Ui::MainWindow *ui;
 };

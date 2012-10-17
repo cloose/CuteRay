@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui opengl
+QT       += core gui opengl script
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,10 +15,21 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     renderresultwidget.cpp \
-    previewwidget.cpp
+    previewwidget.cpp \
+    scriptwidget.cpp \
+    scriptevaluator.cpp \
+    world.cpp \
+    directionallight.cpp \
+    light.cpp
 
 HEADERS  += mainwindow.h \
     renderresultwidget.h \
-    previewwidget.h
+    previewwidget.h \
+    scriptwidget.h \
+    scriptevaluator.h \
+    world.h \
+    directionallight.h \
+    light.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    scriptwidget.ui

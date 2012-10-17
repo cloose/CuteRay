@@ -1,0 +1,3 @@
+directionalLight.create();
+directionalLight.setDirection(1, 1, 2);
+directionalLight.setColor(0.75, 0.75, 0.75);

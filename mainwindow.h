@@ -15,14 +15,17 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void onFileOpen();
+    void onRenderStart();
+    void onRenderStop();
+
 private:
     void setupActions();
 
-private slots:
-    void onFileOpen();
-
 private:
     Ui::MainWindow *ui;
+    bool isRenderingRunning;
 };
 
 #endif // MAINWINDOW_H

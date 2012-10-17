@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>531</width>
-    <height>351</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,8 +31,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>201</width>
-            <height>206</height>
+            <width>336</width>
+            <height>444</height>
            </rect>
           </property>
          </widget>
@@ -57,8 +57,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>201</width>
-            <height>206</height>
+            <width>335</width>
+            <height>444</height>
            </rect>
           </property>
          </widget>
@@ -74,7 +74,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>531</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>
@@ -86,15 +86,15 @@
     <addaction name="separator"/>
     <addaction name="exitAction"/>
    </widget>
+   <widget class="QMenu" name="renderMenu">
+    <property name="title">
+     <string>&amp;Render</string>
+    </property>
+    <addaction name="startAction"/>
+    <addaction name="stopAction"/>
+   </widget>
    <addaction name="fileMenu"/>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
+   <addaction name="renderMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QDockWidget" name="propertiesDock">
@@ -125,7 +125,20 @@
    <attribute name="dockWidgetArea">
     <number>8</number>
    </attribute>
-   <widget class="QWidget" name="dockWidgetContents_2"/>
+   <widget class="ScriptWidget" name="scriptDockContents"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="startAction"/>
+   <addaction name="stopAction"/>
   </widget>
   <action name="openAction">
    <property name="text">
@@ -135,6 +148,16 @@
   <action name="exitAction">
    <property name="text">
     <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="startAction">
+   <property name="text">
+    <string>&amp;Start</string>
+   </property>
+  </action>
+  <action name="stopAction">
+   <property name="text">
+    <string>S&amp;top</string>
    </property>
   </action>
  </widget>
@@ -150,6 +173,12 @@
    <class>RenderResultWidget</class>
    <extends>QWidget</extends>
    <header>renderresultwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ScriptWidget</class>
+   <extends>QWidget</extends>
+   <header>scriptwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

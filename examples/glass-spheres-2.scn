@@ -1,0 +1,4 @@
+var d1 = new DirectionalLight();
+d1.setDirection(1, 1, 2);
+d1.setIntensityColor(0.75, 0.75, 0.75);
+world.addLight(d1);
